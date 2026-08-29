@@ -1,0 +1,174 @@
+<!-- Carga de tipografía deportiva y estilos -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    /* Ocultar anuncios y elementos no deseados de la plantilla de EC */       
+    .tp-backdrop.tp-active, .content_gpt_top_ads, .sticky-top, .nav-d__menu.active, #gpt_cover, .skin-template-model0.ads_pushed, .skin-template-model0, #clever-45754-889974-sticky-footer, #clever-45754-1475206-sticky-footer-iframe, #gpt_zocalo, #clever-45754-sticky-footer-shadow, #browsi_wrapper_0_ai_1_rc_0, #browsi_wrapper_1_ai_1_rc_0, #browsi_wrapper_2_ai_1_rc_0, #browsi_wrapper_3_ai_1_rc_0, #browsi_wrapper_4_ai_1_rc_0, #browsi_wrapper_5_ai_1_rc_0, #browsi_wrapper_6_ai_1_rc_0, #browsi_wrapper_7_ai_1_rc_0, #browsi_wrapper_8_ai_1_rc_0, #browsi_wrapper_9_ai_1_rc_0, #browsi_wrapper_10_ai_1_rc_0, .fs-sticky-footer, .orp-player-wrapper, #clever-45754-sticky-footer, #clever-45754-1475206-sticky-footer-shadow, #elcomercio_zocalo, #merlin-widget-root{
+        display: none !important;
+        height: 0 !important;
+    }  
+    .nav-d__main-scroll.scrolled{ z-index: 9999; }
+    .skin-template-model0 { top: 100px !important; z-index: -1 !important; }
+    body{ overflow-y: scroll !important; }
+    .content-layout-container { background-color: transparent !important; }
+    .tp-modal-open{ overflow: auto !important; }
+
+    /* REGLAS BASE DE TEXTO PARA PLANTILLA (Se mantienen pero adaptadas a tema oscuro en CSS) */
+    #ecdata-especial .story-text p, #ecdata-especial .intro-text { font-family: 'Georgia', 'Times New Roman', serif !important; font-weight: 400 !important; }
+    #ecdata-especial .story-text strong, #ecdata-especial .story-text b, #ecdata-especial strong, #ecdata-especial b { font-family: 'Georgia', 'Times New Roman', serif !important; font-weight: bold !important; }
+</style> 
+
+<!-- INICIO DEL CONTENEDOR ESCUDO -->
+<div id="ecdata-especial">
+    <header class="special-header">
+        <div class="kicker">
+            <!-- El logo se vuelve blanco gracias al CSS (filter: invert) -->
+            <img src="https://fabmonge.github.io/Voto_estrategico_f/fotos/logo_ecdata.png" alt="Logo ECData" onerror="this.style.display='none'" class="logo-blanco">
+        </div>
+        
+        <h1 class="headline">LA PELEA DE MI VIDA</h1>
+        <h2 class="subheadline">Cuatro atletas peruanos compiten en la última temporada de "Dana White's Contender Series", un programa de streaming que premia a los ganadores con un contrato de la UFC. Conócelos:</h2>
+    </header>
+
+    <!-- GRILLA DE PELEADORES (Sin cajas, pegados y más grandes) -->
+    <section class="fighters-grid">
+        
+        <!-- 1. OSCAR RAVELLO (ACTIVO) -->
+        <div class="fighter-column active">
+            <h3 class="fighter-name">OSCAR<br>RAVELLO</h3>
+            <div class="fighter-img-container">
+                <img src="Ravello.jpg" class="fighter-img" alt="Oscar Ravello">
+            </div>
+            <div class="fighter-content">
+                <a href="#" class="action-btn">
+                    <span>▶ VER VIDEO</span>
+                </a>
+                <div class="fighter-stats">
+                    <div class="stat-line"><span class="stat-label">Edad:</span> <span class="stat-val">27 años</span></div>
+                    <div class="stat-line">
+                        <span class="stat-label">Récord:</span>
+                        <div class="record-bars">
+                            <span class="rec-box rec-w" title="Victorias">13</span>
+                            <span class="rec-separator">-</span>
+                            <span class="rec-box rec-l" title="Derrotas">3</span>
+                            <span class="rec-separator">-</span>
+                            <span class="rec-box rec-d" title="Empates">1</span>
+                        </div>
+                    </div>
+                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">15/09</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. PIERO GUAYLUPO (PRÓXIMAMENTE) -->
+        <div class="fighter-column disabled">
+            <h3 class="fighter-name">PIERO<br>GUAYLUPO</h3>
+            <div class="fighter-img-container">
+                <img src="Guaylupo.jpg" class="fighter-img" alt="Piero Guaylupo">
+            </div>
+            <div class="fighter-content">
+                <div class="action-btn">
+                    <span>PRÓXIMAMENTE</span>
+                </div>
+                <div class="fighter-stats">
+                    <div class="stat-line"><span class="stat-label">Edad:</span> <span class="stat-val">21 años</span></div>
+                    <div class="stat-line">
+                        <span class="stat-label">Récord:</span>
+                        <div class="record-bars">
+                            <span class="rec-box rec-w" title="Victorias">12</span>
+                            <span class="rec-separator">-</span>
+                            <span class="rec-box rec-l" title="Derrotas">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">22/09</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. IAN ESCUZA (PRÓXIMAMENTE) -->
+        <div class="fighter-column disabled">
+            <h3 class="fighter-name">IAN<br>ESCUZA</h3>
+            <div class="fighter-img-container">
+                <img src="Escuza.jpg" class="fighter-img" alt="Ian Escuza">
+            </div>
+            <div class="fighter-content">
+                <div class="action-btn">
+                    <span>PRÓXIMAMENTE</span>
+                </div>
+                <div class="fighter-stats">
+                    <div class="stat-line"><span class="stat-label">Edad:</span> <span class="stat-val">30 años</span></div>
+                    <div class="stat-line">
+                        <span class="stat-label">Récord:</span>
+                        <div class="record-bars">
+                            <span class="rec-box rec-w" title="Victorias">7</span>
+                            <span class="rec-separator">-</span>
+                            <span class="rec-box rec-l" title="Derrotas">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">29/09</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. ALEXANDER CHAVEZ (PRÓXIMAMENTE) -->
+        <div class="fighter-column disabled">
+            <h3 class="fighter-name">ALEXANDER<br>CHÁVEZ</h3>
+            <div class="fighter-img-container">
+                <img src="Chavez.jpg" class="fighter-img" alt="Alexander Chávez">
+            </div>
+            <div class="fighter-content">
+                <div class="action-btn">
+                    <span>PRÓXIMAMENTE</span>
+                </div>
+                <div class="fighter-stats">
+                    <div class="stat-line"><span class="stat-label">Edad:</span> <span class="stat-val">25 años</span></div>
+                    <div class="stat-line">
+                        <span class="stat-label">Récord:</span>
+                        <div class="record-bars">
+                            <span class="rec-box rec-w" title="Victorias">9</span>
+                            <span class="rec-separator">-</span>
+                            <span class="rec-box rec-l" title="Derrotas">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">02/10</span></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- TEXTO AL FINAL DE LA NOTA -->
+    <article class="story-text">
+        <p>En los máximos cargos subnacionales —gobernadores regionales, alcaldes provinciales y alcaldes distritales—, la proporción de candidatos sin estudios concluidos luego del colegio es menor que el promedio, pero bastante distinta en cada uno: mientras que solo el 11% de los postulantes a gobernador regional no registra estudios superiores, la cifra sube a 20% en los candidatos a alcalde provincial y alcanza el 39% en los que aspiran alcaldías distritales.</p>
+        <p>La brecha más amplia está en los candidatos a regidores distritales, donde dos tercios no reportan estudios superiores concluidos.</p>
+    </article>
+
+    <!-- FOOTER DE CRÉDITOS -->
+    <footer class="special-credits-black">    
+        <h3 class="credits-main-title">Créditos</h3>
+        <div class="credit-block">
+            <span class="credit-role">Investigación y entrevistas</span>
+            <span class="credit-name">Gino Alva</span>
+        </div>
+        <div class="credit-block">
+            <span class="credit-role">Video y fotos</span>
+            <span class="credit-name">Lenin Tadeo</span>
+        </div>
+        <div class="credit-block">
+            <span class="credit-role">Diseño y desarrollo</span>
+            <span class="credit-name">Fabrizio Monge</span>
+        </div>
+        <div class="credit-block">
+            <span class="credit-role">Edición general</span>
+            <span class="credit-name">Ariana Lira</span>
+        </div>
+        <div class="credits-logo-container">
+            <img src="https://fabmonge.github.io/Voto_estrategico_f/fotos/logo-comercio-blanco.png" alt="Logo ECData" onerror="this.style.display='none'">
+            <div class="copyright-text">©2026 Empresa Editora El Comercio. Todos los derechos reservados</div>
+        </div>
+    </footer>
+
+</div> <!-- FIN DEL CONTENEDOR ESCUDO -->
+
+<script src="app.js"></script>

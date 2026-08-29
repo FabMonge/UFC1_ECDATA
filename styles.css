@@ -1,0 +1,248 @@
+/* =========================================
+   1. RESET Y CONFIGURACIÓN BASE (DARK MODE)
+   ========================================= */
+body, html { margin: 0; padding: 0; background-color: #050505; font-family: 'Arial', sans-serif; }
+
+#ecdata-especial {
+    background-color: #050505; 
+    color: #ffffff;
+    padding-bottom: 40px;
+}
+
+/* =========================================
+   2. HEADER Y EDITORIAL
+   ========================================= */
+#ecdata-especial .kicker { margin-bottom: 25px !important; display: flex !important; justify-content: center !important; align-items: center !important; }
+#ecdata-especial .kicker img { height: 55px; width: auto; display: block; max-width: 100%; }
+#ecdata-especial .logo-blanco { filter: brightness(0) invert(1); } 
+
+#ecdata-especial .special-header { max-width: 900px !important; margin: 60px auto 40px auto !important; padding: 0 20px !important; text-align: center !important; }
+
+#ecdata-especial .headline { 
+    font-family: 'Bebas Neue', 'Arial', sans-serif !important;
+    font-size: 80px; 
+    color: #ffffff !important;
+    line-height: 1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    letter-spacing: 2px !important; 
+    text-transform: uppercase;
+}
+#ecdata-especial .subheadline { 
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    color: #aaaaaa; 
+    line-height: 1.5 !important;
+    margin-top: 0 !important;
+    margin-bottom: 30px !important; 
+}
+
+/* =========================================
+   3. GRILLA DE PELEADORES (PÓSTER CONTINUO)
+   ========================================= */
+#ecdata-especial .fighters-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0; 
+    max-width: 1200px; 
+    margin: 40px auto 60px auto;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background-color: #0a0a0a;
+}
+
+#ecdata-especial .fighter-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-right: 1px solid #222; 
+    transition: background-color 0.4s ease;
+    padding-top: 25px;
+}
+#ecdata-especial .fighter-column:last-child {
+    border-right: none;
+}
+
+#ecdata-especial .fighter-column:hover {
+    background-color: #111; 
+}
+
+#ecdata-especial .fighter-name {
+    font-family: 'Bebas Neue', 'Arial', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    line-height: 0.9;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+#ecdata-especial .fighter-img-container {
+    width: 100%;
+    aspect-ratio: 4/5; 
+    overflow: hidden;
+    position: relative;
+}
+
+#ecdata-especial .fighter-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: filter 0.5s ease, transform 0.6s ease;
+}
+
+/* --- ESTADOS DE LAS IMÁGENES --- */
+
+/* 1. Activos ("Ver Video") */
+#ecdata-especial .fighter-column.active .fighter-img {
+    filter: grayscale(0%) contrast(1.05) brightness(1); /* A color por defecto */
+}
+#ecdata-especial .fighter-column.active:hover .fighter-img {
+    transform: scale(1.05); /* Zoom */
+    filter: grayscale(0%) contrast(1.1) brightness(1.15); /* Brillito extra al pasar el mouse */
+}
+
+/* 2. Próximamente (Inactivos) */
+#ecdata-especial .fighter-column.disabled .fighter-img {
+    filter: grayscale(100%) contrast(1.1) brightness(0.4); /* Gris y en las sombras por defecto */
+}
+#ecdata-especial .fighter-column.disabled:hover .fighter-img {
+    transform: scale(1.03); /* Zoom ligero */
+    filter: grayscale(100%) contrast(1.1) brightness(0.85); /* Se ilumina para mostrar interactividad, pero sigue gris */
+}
+
+/* ------------------------------- */
+
+#ecdata-especial .fighter-content {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* =========================================
+   4. BOTONES (Adaptados al Dark Mode)
+   ========================================= */
+#ecdata-especial .action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    margin-bottom: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#ecdata-especial .fighter-column.active .action-btn {
+    border-color: #d65442;
+    color: #d65442;
+    cursor: pointer;
+}
+#ecdata-especial .fighter-column.active .action-btn:hover {
+    background: #d65442;
+    color: #fff;
+}
+
+#ecdata-especial .fighter-column.disabled .action-btn {
+    border-color: #333;
+    color: #666;
+    background: transparent;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* =========================================
+   5. DATOS DE PELEADORES (Dark Mode)
+   ========================================= */
+#ecdata-especial .fighter-stats {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    text-align: left;
+    margin-top: auto;
+    width: 100%;
+}
+
+#ecdata-especial .stat-line { 
+    margin-bottom: 12px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+    padding-bottom: 8px;
+}
+#ecdata-especial .stat-line:last-child { 
+    margin-bottom: 0; 
+    border-bottom: none;
+    padding-bottom: 0;
+}
+#ecdata-especial .stat-label { font-weight: 700; color: #aaa; text-transform: uppercase; font-size: 11px;}
+#ecdata-especial .stat-val { color: #fff; font-weight: bold; }
+
+#ecdata-especial .record-bars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#ecdata-especial .rec-box {
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 1;
+    min-width: 14px;
+    text-align: center;
+}
+
+#ecdata-especial .rec-separator { color: #555; font-weight: bold; }
+#ecdata-especial .rec-w { background-color: #2e7d32; } 
+#ecdata-especial .rec-l { background-color: #c62828; } 
+#ecdata-especial .rec-d { background-color: #fbc02d; color: #111; } 
+
+/* =========================================
+   6. ARTÍCULO Y CRÉDITOS (Dark Mode)
+   ========================================= */
+#ecdata-especial .story-text { max-width: 700px; margin: 0 auto 40px auto; padding: 0 20px; }
+#ecdata-especial .story-text p { font-size: 18px; line-height: 1.7; margin-bottom: 22px; color: #cccccc; }
+
+#ecdata-especial .special-credits-black { background-color: #000; color: #fff; padding: 60px 20px; text-align: center; margin-top: 20px; border-top: 1px solid #222; }
+#ecdata-especial .credits-main-title { font-family: 'Georgia', serif; font-size: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-top: 0; margin-bottom: 30px; }
+#ecdata-especial .credit-block { margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; }
+#ecdata-especial .credit-role { font-size: 11px; font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 5px; letter-spacing: 1px; }
+#ecdata-especial .credit-name { font-family: 'Georgia', serif; font-size: 16px; color: #ddd; }
+#ecdata-especial .copyright-text { font-size: 11px; color: #555; margin-top: 30px; }
+
+/* =========================================
+   7. RESPONSIVE (MOBILE & TABLET)
+   ========================================= */
+@media (max-width: 992px) {
+    #ecdata-especial .fighters-grid {
+        grid-template-columns: repeat(2, 1fr);
+        border-left: none; border-right: none;
+    }
+    #ecdata-especial .fighter-column:nth-child(2) { border-right: none; }
+    #ecdata-especial .fighter-column:nth-child(3) { border-bottom: none; border-top: 1px solid #222;}
+    #ecdata-especial .fighter-column:nth-child(4) { border-top: 1px solid #222;}
+}
+
+@media (max-width: 600px) {
+    #ecdata-especial .headline { font-size: 55px !important; }
+    #ecdata-especial .fighters-grid {
+        grid-template-columns: 1fr;
+    }
+    #ecdata-especial .fighter-column { border-right: none; border-bottom: 1px solid #222; }
+    #ecdata-especial .fighter-column:last-child { border-bottom: none; }
+}
