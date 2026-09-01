@@ -95,24 +95,32 @@ body, html { margin: 0; padding: 0; background-color: #050505; font-family: 'Ari
     transition: filter 0.5s ease, transform 0.6s ease;
 }
 
+/* Ajuste específico para encuadrar a Guaylupo */
+#ecdata-especial .img-shift-up {
+    height: 110%;
+    width: 110%;
+    margin-top: -10%;
+    margin-left: -5%;
+}
+
 /* --- ESTADOS DE LAS IMÁGENES --- */
 
 /* 1. Activos ("Ver Video") */
 #ecdata-especial .fighter-column.active .fighter-img {
-    filter: grayscale(0%) contrast(1.05) brightness(1); /* A color por defecto */
+    filter: grayscale(0%) contrast(1.05) brightness(1);
 }
 #ecdata-especial .fighter-column.active:hover .fighter-img {
-    transform: scale(1.05); /* Zoom */
-    filter: grayscale(0%) contrast(1.1) brightness(1.15); /* Brillito extra al pasar el mouse */
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(1.1) brightness(1.15); 
 }
 
 /* 2. Próximamente (Inactivos) */
 #ecdata-especial .fighter-column.disabled .fighter-img {
-    filter: grayscale(100%) contrast(1.1) brightness(0.4); /* Gris y en las sombras por defecto */
+    filter: grayscale(100%) contrast(1.1) brightness(0.4); 
 }
 #ecdata-especial .fighter-column.disabled:hover .fighter-img {
-    transform: scale(1.03); /* Zoom ligero */
-    filter: grayscale(100%) contrast(1.1) brightness(0.85); /* Se ilumina para mostrar interactividad, pero sigue gris */
+    transform: scale(1.03); 
+    filter: grayscale(100%) contrast(1.1) brightness(0.85); 
 }
 
 /* ------------------------------- */
@@ -125,7 +133,7 @@ body, html { margin: 0; padding: 0; background-color: #050505; font-family: 'Ari
 }
 
 /* =========================================
-   4. BOTONES (Adaptados al Dark Mode)
+   4. BOTONES 
    ========================================= */
 #ecdata-especial .action-btn {
     display: inline-flex;
@@ -163,7 +171,7 @@ body, html { margin: 0; padding: 0; background-color: #050505; font-family: 'Ari
 }
 
 /* =========================================
-   5. DATOS DE PELEADORES (Dark Mode)
+   5. DATOS DE PELEADORES
    ========================================= */
 #ecdata-especial .fighter-stats {
     font-family: 'Arial', sans-serif;
@@ -213,7 +221,7 @@ body, html { margin: 0; padding: 0; background-color: #050505; font-family: 'Ari
 #ecdata-especial .rec-d { background-color: #fbc02d; color: #111; } 
 
 /* =========================================
-   6. ARTÍCULO Y CRÉDITOS (Dark Mode)
+   6. ARTÍCULO Y CRÉDITOS 
    ========================================= */
 #ecdata-especial .story-text { max-width: 700px; margin: 0 auto 40px auto; padding: 0 20px; }
 #ecdata-especial .story-text p { font-size: 18px; line-height: 1.7; margin-bottom: 22px; color: #cccccc; }
