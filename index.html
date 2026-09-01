@@ -1,6 +1,6 @@
 <!-- Carga de tipografía deportiva y estilos -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fabmonge.github.io/UFC1_ECDATA/styles.css">
+<link rel="stylesheet" href="styles.css">
 
 <style>
     /* Ocultar anuncios y elementos no deseados de la plantilla de EC */       
@@ -14,7 +14,7 @@
     .content-layout-container { background-color: transparent !important; }
     .tp-modal-open{ overflow: auto !important; }
 
-    /* REGLAS BASE DE TEXTO PARA PLANTILLA (Se mantienen pero adaptadas a tema oscuro en CSS) */
+    /* REGLAS BASE DE TEXTO PARA PLANTILLA */
     #ecdata-especial .story-text p, #ecdata-especial .intro-text { font-family: 'Georgia', 'Times New Roman', serif !important; font-weight: 400 !important; }
     #ecdata-especial .story-text strong, #ecdata-especial .story-text b, #ecdata-especial strong, #ecdata-especial b { font-family: 'Georgia', 'Times New Roman', serif !important; font-weight: bold !important; }
 </style> 
@@ -23,7 +23,6 @@
 <div id="ecdata-especial">
     <header class="special-header">
         <div class="kicker">
-            <!-- El logo se vuelve blanco gracias al CSS (filter: invert) -->
             <img src="https://fabmonge.github.io/Voto_estrategico_f/fotos/logo_ecdata.png" alt="Logo ECData" onerror="this.style.display='none'" class="logo-blanco">
         </div>
         
@@ -31,17 +30,18 @@
         <h2 class="subheadline">Cuatro atletas peruanos compiten en la última temporada de "Dana White's Contender Series", un programa de streaming que premia a los ganadores con un contrato de la UFC. Conócelos:</h2>
     </header>
 
-    <!-- GRILLA DE PELEADORES (Sin cajas, pegados y más grandes) -->
+    <!-- GRILLA DE PELEADORES -->
     <section class="fighters-grid">
         
         <!-- 1. OSCAR RAVELLO (ACTIVO) -->
         <div class="fighter-column active">
             <h3 class="fighter-name">OSCAR<br>RAVELLO</h3>
             <div class="fighter-img-container">
-                <img src="https://fabmonge.github.io/UFC1_ECDATA/Ravello.jpg" class="fighter-img" alt="Oscar Ravello">
+                <img src="Ravello.jpg" class="fighter-img" alt="Oscar Ravello">
             </div>
             <div class="fighter-content">
-                <a href="https://elcomercio.pe/ecdata/elecciones-municipales-2026-elecciones-regionales-2026-keiko-fujimori-fuerza-popular-rafael-lopez-aliaga-carlos-bruce-franco-vidal-onpe-jne-votaciones-noticia/" class="action-btn">
+                <!-- LINK PROVISIONAL AÑADIDO AQUÍ -->
+                <a href="https://elcomercio.pe/ecdata/elecciones-municipales-2026-elecciones-regionales-2026-keiko-fujimori-fuerza-popular-rafael-lopez-aliaga-carlos-bruce-franco-vidal-onpe-jne-votaciones-noticia/" target="_blank" class="action-btn">
                     <span>▶ VER VIDEO</span>
                 </a>
                 <div class="fighter-stats">
@@ -56,7 +56,8 @@
                             <span class="rec-box rec-d" title="Empates">1</span>
                         </div>
                     </div>
-                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">15/09</span></div>
+                    <!-- TEXTO CAMBIADO A "PELEA" -->
+                    <div class="stat-line"><span class="stat-label">Pelea:</span> <span class="stat-val">15/09</span></div>
                 </div>
             </div>
         </div>
@@ -65,7 +66,8 @@
         <div class="fighter-column disabled">
             <h3 class="fighter-name">PIERO<br>GUAYLUPO</h3>
             <div class="fighter-img-container">
-                <img src="https://fabmonge.github.io/UFC1_ECDATA/Guaylupo.jpg" class="fighter-img" alt="Piero Guaylupo">
+                <!-- SE AGREGÓ LA CLASE "img-shift-up" PARA SUBIR SU CABEZA -->
+                <img src="Guaylupo.jpg" class="fighter-img img-shift-up" alt="Piero Guaylupo">
             </div>
             <div class="fighter-content">
                 <div class="action-btn">
@@ -81,7 +83,8 @@
                             <span class="rec-box rec-l" title="Derrotas">0</span>
                         </div>
                     </div>
-                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">22/09</span></div>
+                    <!-- TEXTO CAMBIADO A "PELEA" -->
+                    <div class="stat-line"><span class="stat-label">Pelea:</span> <span class="stat-val">22/09</span></div>
                 </div>
             </div>
         </div>
@@ -90,7 +93,7 @@
         <div class="fighter-column disabled">
             <h3 class="fighter-name">IAN<br>ESCUZA</h3>
             <div class="fighter-img-container">
-                <img src="https://fabmonge.github.io/UFC1_ECDATA/Escuza.jpg" class="fighter-img" alt="Ian Escuza">
+                <img src="Escuza.jpg" class="fighter-img" alt="Ian Escuza">
             </div>
             <div class="fighter-content">
                 <div class="action-btn">
@@ -106,7 +109,8 @@
                             <span class="rec-box rec-l" title="Derrotas">0</span>
                         </div>
                     </div>
-                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">29/09</span></div>
+                    <!-- TEXTO CAMBIADO A "PELEA" -->
+                    <div class="stat-line"><span class="stat-label">Pelea:</span> <span class="stat-val">29/09</span></div>
                 </div>
             </div>
         </div>
@@ -115,7 +119,7 @@
         <div class="fighter-column disabled">
             <h3 class="fighter-name">ALEXANDER<br>CHÁVEZ</h3>
             <div class="fighter-img-container">
-                <img src="https://fabmonge.github.io/UFC1_ECDATA/Chavez.jpg" class="fighter-img" alt="Alexander Chávez">
+                <img src="Chavez.jpg" class="fighter-img" alt="Alexander Chávez">
             </div>
             <div class="fighter-content">
                 <div class="action-btn">
@@ -131,7 +135,8 @@
                             <span class="rec-box rec-l" title="Derrotas">0</span>
                         </div>
                     </div>
-                    <div class="stat-line"><span class="stat-label">Fecha:</span> <span class="stat-val">02/10</span></div>
+                    <!-- TEXTO CAMBIADO A "PELEA" -->
+                    <div class="stat-line"><span class="stat-label">Pelea:</span> <span class="stat-val">02/10</span></div>
                 </div>
             </div>
         </div>
