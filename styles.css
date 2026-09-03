@@ -122,6 +122,14 @@ body, html { margin: 0; padding: 0; background-color: #050505; font-family: 'Ari
     margin-left: -5%;
 }
 
+/* Ajuste sutil para encuadrar a Escuza y Chávez */
+#ecdata-especial .img-shift-up-slight {
+    height: 106%;
+    width: 106%;
+    margin-top: -6%;
+    margin-left: -3%;
+}
+
 /* ------------------------------- */
 
 #ecdata-especial .fighter-content {
